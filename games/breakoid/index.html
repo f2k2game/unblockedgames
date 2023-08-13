@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <head>
+    <meta charset="UTF-8">
+    <title>Breakoid</title>
+<link rel="manifest" href="manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Native">
+<meta name="theme-color" content="#0275d8">
+<meta name="msapplication-navbutton-color" content="#0275d8">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+    
+    <style>
+        body,
+        canvas {
+            touch-action: none;
+            -webkit-user-select: none;
+            background: #000;
+            margin: 0;
+            padding: 0;
+            border: 0
+        }
+
+        body {
+            overflow: hidden;
+            position: fixed
+        }
+
+        canvas {
+            display: block
+        }
+
+        #preloader-overlay {
+            touch-action: none;
+            -webkit-user-select: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            background-image: linear-gradient(#001a2f, #2c0d1e, #4c380b)
+        }
+
+        .supernice {
+            position: absolute;
+            top: 20px;
+            left: 20px
+        }
+
+        .preloader {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .game-icon {
+            margin: 6px
+        }
+
+        .loading-ring {
+            position: absolute;
+            transform-origin: center;
+            overflow: visible;
+            animation-name: round-round-round;
+            animation-duration: 2.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite
+        }
+
+        @keyframes round-round-round {
+            0% {
+                transform: rotate(0)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .loading-ring-circle {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 10 490;
+            transform-origin: center;
+            animation-name: dash-rotation-compensation, dash;
+            animation-duration: 6s, 1.5s;
+            animation-timing-function: step-end, ease;
+            animation-iteration-count: infinite, infinite
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 0 490;
+                stroke-dashoffset: 0
+            }
+            50% {
+                stroke-dasharray: 368 490;
+                stroke-dashoffset: 0
+            }
+            100% {
+                stroke-dasharray: 0 490;
+                stroke-dashoffset: -368
+            }
+        }
+
+        @keyframes dash-rotation-compensation {
+            0% {
+                transform: rotate(0)
+            }
+            25% {
+                transform: rotate(-90deg)
+            }
+            50% {
+                transform: rotate(-180deg)
+            }
+            75% {
+                transform: rotate(-270deg)
+            }
+        }
+
+        .show {
+            opacity: 1
+        }
+
+        .hide {
+            opacity: 0;
+            transition: opacity .4s
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader-overlay" class="show"><img class="supernice" src="supernice-logo.png">
+        <div class="preloader"><svg class="loading-ring" height="160" width="160"><circle class="loading-ring-circle" stroke="#fc0" stroke-width="8" fill="transparent" r="78" cx="80" cy="80"/></svg> <img class="game-icon" src="preloader-icon.png"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
