@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<your_game>
+
+	<!--Facebook-->
+	
+	<id>YOUR ID APP FACEBOOK</id>
+	<!--EXAMPLE: 637119926359209 -->
+	
+	<message>YOUR MESSAGE OR GAME NAME</message>
+	<!--EXAMPLE: Snowball World -->
+		
+	<link>https://unblockedpremium.com/</link>
+	<!--EXAMPLE: http://codecanyon.net/user/wall-e/portfolio -->
+		
+	<caption>YOUR CAPTION</caption>
+	<!--EXAMPLE: Come play this incredible adventure! -->
+	
+	<picture>YOUR URL PICTURE</picture>
+	<!--EXAMPLE: http://filippileonardo.com/_temp/envato/snowball_world_01/sw_share_01.png -->
+	
+	<description>YOUR DESCRIPTION</description>
+	<!--EXAMPLE: In a difficult and distant world, the brave cat Snowball will start your adventure! Snowball have to go through 20 levels, each more difficult than the other. And on the way, you have to catch all the birds and mice sey world. Find the key and go through the door that leads to a new level!
+
+Snowball World is an amazing game with 20 levels, great graphics and colors, many effects and animations that make the game more fun!
+
+The game was made using the program Construct 2. Use the most stable version of the program. If you want to edit the game, you will need to have a license of the program. But to edit the images, just replace the folder that the images are. -->
+
+	<!--Twitter-->
+	
+	<message_twitter>Play Amazing Catty Adventure at https://play.google.com/store/apps/details?id=com.fivhop.games&hl=en</message_twitter>
+	<!--EXAMPLE: Snowball World http://codecanyon.net/user/wall-e/portfolio -->
+	
+</your_game>

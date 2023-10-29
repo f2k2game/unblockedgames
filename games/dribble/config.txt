@@ -1,0 +1,8 @@
+{"c2dictionary":true, "data":{
+	"facebookPage":"#",
+	"twitterPage":"#",
+	"googlePage":"#",
+	"rateUs":"#",
+	"moreGames":"#",
+	"shareMessage":"I just scored $score at Escape !"
+}}
